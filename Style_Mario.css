@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(/Programador/Client-Side/Image/Cenario.png);
+}
+h1{
+    text-align: center;
+    color: rgb(230, 237, 24);
+    font-family: Arial, sans-serif;
+    text-shadow: #000 2px -1px;
+}
+
+.gameBoard{
+    width: 80%;             
+    height: 580px;
+    border-bottom: 15px solid rgb(15, 162, 44);
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    background: linear-gradient( #61c6ee , #98cef0 ); 
+    overflow: hidden;
+}
+.gameOver{
+    display: none;
+    position: absolute;
+    margin: 10px;
+    padding: 250px 500px;
+}
+    /*      Tubo        */
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipeAnimation 1.5s infinite linear; 
+}
+
+@keyframes pipeAnimation {
+    from{
+        right: -100px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+    /*      Mario      */
+.mario{
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+}
+.Jump{
+    animation: Jump 500ms ease-out ;
+
+}
+@keyframes Jump {
+    
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+
+.clouds{
+    position: absolute;
+    width: 900px;
+    animation: cloudsAnimation 8s infinite linear;
+}
+
+@keyframes cloudsAnimation {
+    from{
+        right: -900px;
+    }
+    to{
+        right: 100%;
+    }
+}
